@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
 div {
-    font-family: 'noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 200;
     text-align: center;
 
@@ -8,44 +10,65 @@ div {
     /* border: 3px solid royalblue; */
 }
 
-
 div.navigation {
-    background-color:#303030;
-    height: 60px;
+    background-color:#303030;     /* 배경색 */
+    height:60px;                    /* 높이 */
 
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left:50px;              /* 왼쪽 여백 */
+    padding-right:50px;             /* 오른쪽 여백 */
 
-    display: flex;
+    display: flex;                  /* 가로 방향으로, contents의 크기만큼 */
     flex-direction: row;
 
-    position:sticky;
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 div.navigation button {
-    background-color: #303030;
+    background-color: #00000000;
     border: 0px;
 
     color: white;
     height: inherit;
-    width: 120px;
+    width:120px;
     text-align: center;
 }
 
-
-div.navigation button:hover {
-    background-color: #525252;
-    color: #3ebada
+a {
+    height: inherit;
 }
 
+div.navigation button:hover {
+    /* 마우스 커서를 가져다 댔을 때 변화 */
+    background-color: #525252;
+    color: magenta;
+}
 
 div.navigation img {
     align-self: center;
     height: 40px;
     padding-right: 40px;
-    filter: invert(100%) sepia(0%) saturate(18%) hue-rotate(314deg) brightness(106%) contrast(104%);
+
+    filter: invert(100%) sepia(0%) saturate(18%)
+    hue-rotate(314deg) brightness(106%) contrast(104%);
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+
+    align-self: center;
+
+    padding: 80px;
+    margin: 0px auto;
+    max-width:1200px;
 }
 
 #book1 {
@@ -69,7 +92,7 @@ div.navigation img {
     height: 120px;
 }
 
-#vook1 .wrapper {
+#book1 .wrapper {
     max-width: 900px;
 }
 
@@ -100,25 +123,8 @@ div.navigation img {
     transform: scaleX(-1);
 }
 
-.card {
-    display: flex;
-    flex-direction: row;
-    height: fit-content;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: row;
-
-    align-self: center;
-
-    padding: 80px;
-    margin: 0px auto;
-    max-width: 1200px;
-}
-
 h1 {
-    font-family: 'noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     font-size: 40px;
     text-align: left;
@@ -131,3 +137,285 @@ p {
     margin-bottom: 10px;
 }
 
+button {
+    /* text setting */
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #0077ff;
+    text-align: center;
+
+    /* button setting */
+    background-color: #00FF0000;
+    border: #0077ff solid;
+    border-radius: 50px;
+    border-width: 1.5px;
+    padding: 10px;
+
+}
+
+button:hover {
+    background-color: #0077ff;
+    color: white;
+}
+
+.title h1{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 30px;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+#book2 {
+    background-color: #ADD5F7;
+}
+
+#book2 .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+div.card-container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+div.card-history {
+    width: 300px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 5px 0px #AAAAAA;
+    margin: 10px;
+
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-history img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-history .text-box {
+    padding: 15px;
+    width: auto;
+    height: fit-content;
+}
+
+.card-history button {
+    align-self: center;
+    width: 80%;
+    margin: 20px;
+}
+
+#book3 {
+    background-color: #4e7ac7;
+}
+
+#book3 .title {
+    color: white;
+}
+
+#book3 .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: fit-content;
+
+    margin-bottom: 20px;
+}
+
+.article-img-container {
+    width: fit-content;
+    height: 215px;
+}
+
+.article-img-container img {
+    width: 350px;
+    height: inherit;
+    object-fit: cover;
+}
+
+.article-desc-container {
+    width: 80%;
+    padding: 20px;
+}
+
+.article-desc-container .text-box {
+    height:120px;
+}
+
+.article-desc-container button {
+    width: 150px;
+    float: right;
+    margin-top: 10px;
+}
+
+.article-img {
+    width: fit-content;
+    height: fit-content;
+}
+
+.article-img #leftimg {
+    width:400px;
+    height: 500px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+
+}
+
+.article-img #rightimg {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-bottom-right-radius: 20px;
+}
+
+.article-section {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.article-wrapper {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    box-shadow: 2px 1px 5px 0px #AAAAAA;
+}
+
+.article-subtitle {
+    border-bottom: #AAAAAA solid 1px;
+}
+
+.article-body {
+    padding-top: 15px;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+}
+
+.article-desc {
+    line-height: 160%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article-desc br {
+    display: none;
+}
+
+#book4 {
+    background-color: #16193b;
+}
+
+#book4 .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#book4 .content {
+    display: flex;
+    flex-direction: row;
+}
+
+#book4 .title {
+    color: white;
+}
+
+
+.diary {
+    display: flex;
+    flex-direction: row;
+
+    width: 80%;
+    height: 500px;
+    background-color: white;
+}
+
+.diary-pic {
+    width: fit-content;
+    height: fit-content;
+}
+
+.diary-pic img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.diary-text {
+    padding: 20px;
+}
+
+.move-pointer {
+    width: fit-content;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.move-pointer img {
+    filter: invert(100%) sepia(0%) saturate(18%)
+    hue-rotate(314deg) brightness(106%) contrast(104%);
+    width: 50px;
+    padding: 30px;
+}
+
+.move-pointer#to-left img {
+    transform: scaleX(-1);
+}
+
+#contact {
+    background-color: #d8e6fd;
+}
+
+#contact .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .content {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-self: center;
+}
+
+.contact-item {
+    padding: 100px 20px 100px 20px;
+    width: 120px;
+}
+
+.contact-item h6 {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    
+    color: black;
+}
+
+.contact-item a {
+    text-decoration-line: none;
+}

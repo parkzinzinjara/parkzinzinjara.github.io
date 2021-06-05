@@ -1,39 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script tape="text/javascript" src="index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+    <script type="text/javascript" src="index.js"></script>
+    <title>소연이의 포트폴리오</title>
 </head>
 <body>
     <div class="navigation">
         <img src="img/icon.svg" alt="logoicon">
-        <button>INSTAGRAM</button>
-        <button>GITHUB</button>
-        <button>BLOG</button>
+        <a href="https://www.instagram.com/thoyeon_/"><button>INSTAGRAM</button></a>
+        <a href="https://github.com/thohohong"><button>GITHUB</button></a>
+        <a href="https://blog.naver.com/thohohong"><button>BLOG</button></a>
     </div>
     <div class="card" id="book1">
         <div class="wrapper">
             <div class="profile_pic">
-                <img src="img/profile.jpg" alt="profile_pic" width="400px"> 
+                <img src="img/profile.jpg" alt="profile_pic" width="400px">
             </div>
             <div class="contents">
-                <h1>박지빈</h1>
+                <h1>홍길동</h1>
                 <p>안녕하세요?</p>
-                <p>  저는 박지빈입니다</p>
+                <p>저는 홍길동입니다.</p>
             <div class="page">
                 <div class="text">
-                    <p id="book1_desc">박지빈의 웹 페이지</p>
+                    <p id="book1_desc">안녕하세요? 홍길동입니다.</p>
                 </div>
                 <div class="arrow">
                     <img src="img/next.svg" alt="left" id="left-arrow">
                     <img src="img/next.svg" alt="right" id="right-arrow">
                 </div>
-            </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" id="book2">
+    <div class="wrapper">
+        <div class="title">
+            <h1>Title</h1>
+        </div>
+        <div class="card-container">
+            <div class="card-history">
+                <img src="img/temp.jpg" alt="history_pic">
+                <div class="text-box">
+                    <h2>유네스코 동아리</h2>
+                    <p>유네스코 동아리에 참여하였다</p>
+                </div>
+                <a href="modal/history1.html" rel="modal:open">
+                    <button>자세히 보기</button>
+                </a>
+            </div>
+            <div class="card-history">
+                <img src="img/temp.jpg" alt="history_pic">
+                <div class="text-box">
+                    <h2>유네스코 동아리</h2>
+                    <p>유네스코 동아리에 참여하였다</p>
+                </div>
+                <a href="modal/history2.html" rel="modal:open">
+                    <button>자세히 보기</button>
+                </a>
+            </div>
+            <div class="card-history">
+                <img src="img/temp.jpg" alt="history_pic">
+                <div class="text-box">
+                    <h2>유네스코 동아리</h2>
+                    <p>유네스코 동아리에 참여하였다</p>
+                </div>
+                <a href="modal/history3.html" rel="modal:open">
+                    <button>자세히 보기</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" id="book3">
+    <div class="wrapper">
+        <div class="title">
+            <h1>Title</h1>
+        </div>
+        <div class="article-container">
+            <div class="article">
+                <div class="article-img-container">
+                    <img src="img/temp.jpg" alt="article_pic">
+                </div>
+                <div class="article-desc-container">
+                    <div class="text-box">
+                        <h2 id="article-title1">
+                            <script>
+                                $(function(){
+                                    $.get('article/article1.html', function(result) {
+                                        var obj = $(result).find('h1');
+                                        document.getElementById("article-title1").innerText = obj.html();
+                                        // articl1.html에 있는 기사 제목을
+                                        // index.html의 기사 칸의 기사 제목 영역에 대입
+                                    });
+                                });
+                            </script>
+                        </h2>
+                        <p id="article-desc1" class="article-desc">
+                            <script>
+                                $(function(){
+                                    $.get('article/article1.html', function(result) {
+                                        var obj = $(result).find('p#text2');
+                                        document.getElementById("article-desc1").innerText = obj.html().substr(0, 550) + "...";
+                                        // articl1.html에 있는 기사 본문을
+                                        // index.html의 기사 칸의 기사 본문 영역에 대입
+                                    });
+                                });
+                            </script>
+                        </p>
+                    </div>
+                    <a href="article/article1.html">
+                        <button>자세히 보기</button>
+                    </a>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-img-container">
+                    <img src="img/temp.jpg" alt="article_pic">
+                </div>
+                <div class="article-desc-container">
+                    <div class="text-box">
+                        <h2 id="article-title2">
+                            <script>
+                                $(function(){
+                                    $.get('article/article2.html', function(result) {
+                                        var obj = $(result).find('h1');
+                                        document.getElementById("article-title2").innerText = obj.html();
+                                        // articl1.html에 있는 기사 본문을
+                                        // index.html의 기사 칸의 기사 본문 영역에 대입
+                                    });
+                                });
+                            </script>
+                        </h2>
+                        <p id="article-desc2" class="article-desc">
+                            <script>
+                                $(function(){
+                                    $.get('article/article2.html', function(result) {
+                                        var obj = $(result).find('p');
+                                        document.getElementById("article-desc2").innerText = obj.html().substr(0, 550) + "...";
+                                        // articl1.html에 있는 기사 본문을
+                                        // index.html의 기사 칸의 기사 본문 영역에 대입
+                                    });
+                                });
+                            </script>
+                        </p>
+                    </div>
+                    <a href="article/article2.html">
+                        <button>자세히 보기</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card" id="book4">
+    <div class="wrapper">
+        <div class="title">
+            <h1>Title</h1>
+        </div>
+        <div class="content">
+            <div class="move-pointer" id="to-left">
+                <img src="img/next.svg" alt="◀" id="diary_left_arrow">
+            </div>
+            <div class="diary">
+                <div class="diary-pic">
+                    <img  src="img/temp.jpg" alt="diary_pic" id="diary_img">
+                </div>
+                <div class="diary-text">
+                    <h2 id="diary_title">Title</h2>
+                    <p id="diary_text">contents</p>
+                </div>
+            </div>
+            <div class="move-pointer" id="to-right">
+                <img src="img/next.svg" alt="▶" id="diary_right_arrow">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" id="contact">
+    <div class="wrapper">
+        <div class="title">
+            <h1>Contact</h1>
+        </div>
+        <div class="content">
+            <div class="contact-item">
+                <a href="mailto;jb842@naver.com">
+                    <img src="/img/email.svg" alt="mail" width="100px">
+                    <h6>e-mail</h6>
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto;jb842@naver.com">
+                    <img src="/img/facebook.svg" alt="mail" width="100px">
+                    <h6>facebook</h6>
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto;jb842@naver.com">
+                    <img src="/img/twitter.png" alt="mail" width="100px">
+                    <h6>twitter</h6>
+                </a>
+            </div>
         </div>
     </div>
 </div>
